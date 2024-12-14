@@ -1,0 +1,78 @@
+.contact-contanier{
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 1rem 0 3rem;
+    box-shadow: 0px 1px 15px rgba(103, 71, 142, 0.4509803922), -4px 4px 2px -4px #d80c71;
+
+    border-radius: 10px;    
+    
+    
+
+
+    .contact-img{
+        flex-basis: 45%;
+        animation: slide-down 0.5s ease;
+        @media screen and (max-width:769px){
+            display: none;
+        }
+        img{
+            max-width: 100%;
+
+        }
+    }
+        .contact-info{
+            flex: 1;
+            color: white;
+            padding: 1rem 6rem;
+            margin: 0 auto;
+
+            @media screen and (max-width:769px){
+                padding: 1rem 25px;
+            }
+            h2{
+                background: url('../../assets/background-button.webp');
+                -webkit-text-fill-color: transparent;
+                background-clip: text; 
+                background-size: cover;
+                font-size: 3rem;
+                margin: 1rem 0;
+                font-weight: 500;
+                text-align: center;
+            }
+                .form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    input{
+                        padding: 12px 15px;
+                        color: white;
+                        max-width: 100%;
+                        outline: none;
+                        background-color: transparent;
+                        border: 1px solid black;
+                        border-radius: 7px;
+                        box-shadow: 0px 1px 15px rgba(103, 71, 142, 0.4509803922), -4px 4px 2px -4px #d80c71;
+
+                        &:focus{
+                            background: transparent;
+                        }
+
+                    }
+                    button{
+                        padding: 12px 15px;
+                        color: white;
+                        border: 1px solid #ec047f;
+                        background-color: var(--main-color);
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+        }
+    }

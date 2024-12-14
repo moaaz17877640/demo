@@ -1,0 +1,110 @@
+
+.intro-section{
+    position: relative;
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+   
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color:var(--section-background);
+        z-index: -1;
+        transform: skewy(-8deg);
+        transform-origin: top left;
+    }
+    .intro-section-item{
+        flex:1 ;
+        margin-left: 2rem;
+
+        @media(max-width:991px) {
+            .landing .text {
+                text-align: center;
+            }
+        }
+
+        h1{
+            background: url('../../assets/background-button.webp');
+            -webkit-text-fill-color: transparent;
+            background-clip: text; 
+            background-size: cover;
+            font-size: 3rem;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        h3{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Playwrite GB S", cursive;
+            color: var(--main-color-alt);
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 2rem;
+            line-height: 1.5;
+            color: var(--main-color-alt);
+            width: 80%;
+        }
+}
+
+.intro-img{
+    flex-basis: 40%;
+
+    img{
+        position: relative;
+        max-width: 100%;
+        animation: up-and-down 5s linear infinite;
+        -webkit-animation: up-and-down 5s linear infinite;
+    }
+}
+@media screen and (max-width:800px) {
+    height: 70vh;
+    .intro-section-item{
+        width: 100%;
+        padding: 1rem;
+        left: 0;
+
+
+    &::after,
+    &::before{
+        content: "";
+        display: block;
+        width:100%;
+        height: 1px;
+        background-color: var(--color-neptune);
+        margin: 2rem 0;
+    }
+    h1{
+        font-size: 35px;
+    -webkit-text-stroke: 1px var(--color-neptune);
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+.intro-img{
+    display: none;
+}
+}
+}
+@keyframes up-and-down {
+
+    0%,
+    100% {
+        top: 0;
+    }
+  
+    50% {
+        top: -50px;
+    }
+  }
